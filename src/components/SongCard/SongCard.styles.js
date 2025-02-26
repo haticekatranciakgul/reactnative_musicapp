@@ -43,7 +43,7 @@ export default StyleSheet.create({
     content_container: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginTop: 10,
+        marginTop: 12,
     }
 
 
