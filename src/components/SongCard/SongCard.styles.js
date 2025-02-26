@@ -29,8 +29,22 @@ export default StyleSheet.create({
         color: 'gray',
         fontWeight: 'bold',
     },
-    soldout_container:{},
-    soldout_title:{}
+    soldout_container:{
+        borderWidth: 1,
+        borderColor: 'red',
+        padding: 5,
+        borderRadius: 5,
+        alignSelf: 'flex-start',
+    },
+    soldout_title:{
+        color: 'red',
+        fontWeight: 'bold',
+    },
+    content_container: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginTop: 10,
+    }
 
 
     
