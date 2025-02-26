@@ -1,20 +1,36 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, FlatList, View } from 'react-native';
+import musicData from './musicData.json';
+import SongCard from './src/components/SongCard';
 
-export default function App() {
+function App() {
+  const renderSong = ({item}) => <SongCard song={item}/>
+
+  const renderSeparator = () => <View style={styles.separator} />
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.container}>
+        <FlatList
+          keyExtractor={(item) => item.id}
+          data={musicData}
+          renderItem={renderSong}
+          ItemSeparatorComponent={renderSeparator}
+        />
+      </View>
+    </SafeAreaView>
   );
 }
+
+export default App;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+   
   },
+  separator: {
+    borderWidth: 1,
+    borderColor: '#e0e0e0',
+  }
 });
