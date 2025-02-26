@@ -8,9 +8,17 @@ const SongCard = (props) => {
             <Image style={styles.image} source={{ uri: props.song.imageUrl }} />
             <View style={styles.inner_container}>
                 <Text style={styles.title}>{props.song.title}</Text>
+               
+                        <Text>{props.song.album}</Text>
+
+                   
                 <View style={styles.content_container}>
+                   
+
+
                     <View style={styles.info_container}>
                         <Text>{props.song.artist}</Text>
+
                         <Text style={styles.year}>{props.song.year}</Text>
                     </View>
                     {props.song.isSoldOut &&

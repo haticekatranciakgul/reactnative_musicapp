@@ -12,8 +12,10 @@ export default StyleSheet.create({
     },
     inner_container: {
         padding: 10,
-        flex:1,
-        justifyContent: 'center'
+        flex:2,
+        justifyContent: 'center',
+        backgroundColor: '#f5f5f5',
+        borderRadius: 10,
     },
     title: {
         fontWeight: 'bold',
