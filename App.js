@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, Text, FlatList, View } from 'react-native';
 import musicData from './musicData.json';
 import SongCard from './src/components/SongCard';
+import SearchBar from './src/components/SearchBar';
 
 function App() {
   const renderSong = ({item}) => <SongCard song={item}/>
@@ -10,14 +11,14 @@ function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.container}>
+      <SearchBar /> 
         <FlatList
           keyExtractor={(item) => item.id}
           data={musicData}
           renderItem={renderSong}
           ItemSeparatorComponent={renderSeparator}
         />
-      </View>
+  
     </SafeAreaView>
   );
 }
