@@ -13,7 +13,7 @@ const SongCard = (props) => {
                         <Text>{props.song.artist}</Text>
                         <Text style={styles.year}>{props.song.year}</Text>
                     </View>
-                    {props.song.isSoldOut === true ?
+                    {props.song.isSoldOut == true ?
                         <View style={styles.soldout_container}>
                             <Text style={styles.soldout_title}>Tükendi</Text>
                         </View> : null}
